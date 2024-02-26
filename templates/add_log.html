@@ -10,15 +10,19 @@
     <div class="container">
         <h2>Workout Details</h2>
         <form action="/add_log" method="post">
+            <div class="muscle_group">
+                <label>Muscle group:</label>
+                <input type="text" name="muscle_group" required>
+            </div>
             <div class="exercises" id="exercises">
                 <div class="exercise">
-                    <label for="exercise1">Exercise:</label>
+                    <label>Exercise:</label>
                     <input type="text" name="exercise[]" required>
-                    <label for="sets1">Sets:</label>
+                    <label>Sets:</label>
                     <input type="number" name="sets[]" min="1" required>
-                    <label for="reps1">Reps:</label>
+                    <label>Reps:</label>
                     <input type="number" name="reps[]" min="1" required>
-                    <label for="weight1">Max weight (kg):</label>
+                    <label>Max weight (kg):</label>
                     <input type="number" name="weight[]">
                 </div>
             </div>
