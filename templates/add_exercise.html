@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Exercise</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Add a New Exercise</h2>
+        <form action="/add_exercise" method="post">
+            <label for="exercise_name">Exercise Name:</label>
+            <input type="text" id="exercise_name" name="exercise_name" required>
+            <label for="muscle_group">Muscle Group:</label>
+            <input type="text" id="muscle_group" name="muscle_group" required>
+            <!-- Add more input fields for exercise details as needed -->
+            <button type="submit">Add Exercise</button>
+        </form>
+    </div>
+</body>
+</html>

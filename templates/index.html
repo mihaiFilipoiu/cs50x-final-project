@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Workout Logs</h2>
+        <a href="/add_log" class="add-log">+</a>
+        <div class="logs">
+            {% for log in logs %}
+                <div class="log">
+                    <p>Date: {{ log.date }}</p>
+                    <p>Duration: {{ log.duration }}</p>
+                    <!-- Display other log details as needed -->
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
