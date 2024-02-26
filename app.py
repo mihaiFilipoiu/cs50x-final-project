@@ -36,9 +36,27 @@ def login():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-        # Check if "username" is empty
-        if not request.form.get("username"):
+
+        username = request.form.get("username")
+        password = request.form.get("password")
+
+        # Check username is submitted
+        if not username:
             return apology("username field empty", 403)
+        # Check username is submitted
+        elif not password:
+            return apology("password field empty", 403)
+        
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+
+        # Check if username and password are valid
+        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], password):
+            return apology("invalid username/password", 403)
+        
+        # Remember which user has logged in
+        session["user_id"] = rows[0]["id"]
+
+        return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
