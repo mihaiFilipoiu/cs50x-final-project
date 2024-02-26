@@ -122,10 +122,36 @@ def index():
     return apology("TODO", 400)
 
 # WIP
-@app.route("/add_log")
+@app.route("/add_log", methods=["GET", "POST"])
 @login_required
 def add_log():
     if request.method == "POST":
-        return apology("WIP", 400)
+        # Process form submission here
+        muscle_group = request.form.get("muscle_group")
+        exercises = request.form.getlist("exercise[]")
+        sets = request.form.getlist("sets[]")
+        reps = request.form.getlist("reps[]")
+        weights = request.form.getlist("weight[]")
+
+        # Current date
+        today = date.today()
+
+        # User id
+        user_id = session["user_id"]
+
+        # Add entry into 'logs' table (also getting the id of the log)
+        log_id = db.execute("""
+                   INSERT INTO logs (user_id, date, muscle_group) 
+                   VALUES (?, ?, ?)""", user_id, today, muscle_group)
+        
+        # Add entry into log_details table
+        for i in range(len(exercises)):
+            db.execute("""
+                       INSERT INTO log_details (log_id, sets, reps, weight, ex_name)
+                       VALUES (?, ?, ?, ?, ?)""",
+                       log_id, sets[i], reps[i], weights[i], exercises[i])
+        
+        return redirect("/")
+
     else: 
         return render_template("add_log.html")
