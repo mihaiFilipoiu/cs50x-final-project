@@ -65,3 +65,13 @@ def register():
 @login_required
 def index():
     return apology("TODO", 400)
+
+@app.route("/add_exercise")
+@login_required
+def index():
+    return apology("TODO", 400)
+
+@app.route("/add_log")
+@login_required
+def index():
+    return apology("TODO", 400)
