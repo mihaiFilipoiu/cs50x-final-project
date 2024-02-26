@@ -27,6 +27,7 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
+# DONE
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
@@ -61,7 +62,8 @@ def login():
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("login.html")
-    
+
+# DONE
 @app.route("/logout")
 def logout():
     """Log user out"""
@@ -72,6 +74,7 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
+# DONE
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
@@ -118,12 +121,8 @@ def register():
 def index():
     return apology("TODO", 400)
 
-@app.route("/add_exercise")
-@login_required
-def add_exercise():
-    return apology("TODO", 400)
-
+# WIP
 @app.route("/add_log")
 @login_required
 def add_log():
-    return apology("TODO", 400)
+    
