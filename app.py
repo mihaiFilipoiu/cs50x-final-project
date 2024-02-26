@@ -125,4 +125,7 @@ def index():
 @app.route("/add_log")
 @login_required
 def add_log():
-    
+    if request.method == "POST":
+        return apology("WIP", 400)
+    else: 
+        return render_template("add_log.html")
