@@ -119,7 +119,12 @@ def register():
 @app.route("/")
 @login_required
 def index():
-    return apology("TODO", 400)
+    # Query the db for the logs and log details of the current user
+    logs = db.execute("""SELECT * FROM logs WHERE user_id = ? 
+                      ORDER BY id DESC""", session["user_id"])
+
+    # Pass the logs to the homepage
+    return render_template("index.html", logs = logs)
 
 # WIP
 @app.route("/add_log", methods=["GET", "POST"])

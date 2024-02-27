@@ -9,13 +9,12 @@
 <body>
     <div class="container">
         <h2>Workout Logs</h2>
-        <a href="/add_log" class="add-log">+</a>
+        <a href="/add_log" class="add_log_sign">+</a>
         <div class="logs">
             {% for log in logs %}
                 <div class="log">
+                    <p>Muscle Group: {{ log.muscle_group }}</p>
                     <p>Date: {{ log.date }}</p>
-                    <p>Duration: {{ log.duration }}</p>
-                    <!-- Display other log details as needed -->
                 </div>
             {% endfor %}
         </div>
