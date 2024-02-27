@@ -115,18 +115,19 @@ def register():
         return redirect("/login")
     else:
         return render_template("register.html")
-    
+
+# DONE    
 @app.route("/")
 @login_required
 def index():
-    # Query the db for the logs and log details of the current user
+    # Query the db for the logs of the current user
     logs = db.execute("""SELECT * FROM logs WHERE user_id = ? 
                       ORDER BY id DESC""", session["user_id"])
 
     # Pass the logs to the homepage
     return render_template("index.html", logs = logs)
 
-# WIP
+# DONE
 @app.route("/add_log", methods=["GET", "POST"])
 @login_required
 def add_log():
@@ -160,3 +161,22 @@ def add_log():
 
     else: 
         return render_template("add_log.html")
+
+# DONE
+@app.route("/log/<int:log_id>")
+@login_required
+def log(log_id):
+    # Query the db for the log details of the current user
+    log_details = db.execute("""SELECT l.id, l.date, l.muscle_group, ld.sets, 
+                            ld.reps, ld.weight, ld.ex_name FROM logs l 
+                            JOIN log_details ld ON l.id = ld.log_id 
+                            JOIN users u ON u.id = l.user_id
+                            WHERE u.id = ? AND l.id = ?
+                            """, session["user_id"], log_id)
+    print(log_details)
+
+    muscle_group = log_details[0]["muscle_group"]
+    date = log_details[0]["date"]
+
+    # Pass the log details to the log's page   
+    return render_template("log.html", muscle_group = muscle_group, date = date, details = log_details)

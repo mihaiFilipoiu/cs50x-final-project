@@ -12,10 +12,12 @@
         <a href="/add_log" class="add_log_sign">+</a>
         <div class="logs">
             {% for log in logs %}
+            <a href="/log/{{ log.id }}" class="log_details">
                 <div class="log">
                     <p>Muscle Group: {{ log.muscle_group }}</p>
                     <p>Date: {{ log.date }}</p>
                 </div>
+            </a>
             {% endfor %}
         </div>
     </div>
