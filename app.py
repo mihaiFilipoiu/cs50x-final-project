@@ -122,7 +122,7 @@ def register():
 def index():
     # Query the db for the logs of the current user
     logs = db.execute("""SELECT * FROM logs WHERE user_id = ? 
-                      ORDER BY id DESC""", session["user_id"])
+                      ORDER BY date DESC""", session["user_id"])
 
     # Pass the logs to the homepage
     return render_template("index.html", logs = logs)

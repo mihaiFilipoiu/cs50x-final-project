@@ -6,12 +6,17 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display:block;
+    justify-content: center;
+    align-items: center;
+    /*
+    */
 }
 
 h2 {
@@ -29,7 +34,7 @@ label {
 
 input[type="text"],
 input[type="password"] {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -68,3 +73,55 @@ button:hover {
     color: #007bff;
     text-decoration: none;
 }
+
+/* CSS for navigation bar */
+
+/* Style the navbar container */
+.navbar {
+    background-color: #333; /* Background color */
+    overflow: hidden; /* Ensure content doesn't overflow */
+  }
+  
+  /* Style the unordered lists inside the navbar */
+  .navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    float: left; /* Float the lists to the left */
+  }
+  
+  /* Style the list items (links) inside the navbar */
+  .navbar li {
+    display: inline-block; /* Display list items inline */
+  }
+  
+  /* Style the links inside the navbar */
+  .navbar a {
+    display: block; /* Display links as block elements */
+    color: white; /* Text color */
+    text-align: center; /* Center-align the text */
+    padding: 14px 20px; /* Add padding */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  /* Change the color of the links when hovered over */
+  .navbar a:hover {
+    background-color: #ddd; /* Change background color */
+    color: black; /* Change text color */
+  }
+  
+  /* Active/current link */
+  .navbar .active {
+    background-color: #4e3355; /* Active link background color */
+  }
+  
+  /* Move the "Home" and "Add Workout" links to the far left */
+  .navbar .left {
+    float: left; /* Float left */
+  }
+  
+  /* Move the "Login", "Register", and "Logout" links to the far right */
+  .navbar .right {
+    float: right; /* Float right */
+  }
+  
