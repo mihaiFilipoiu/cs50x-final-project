@@ -1,127 +1,117 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  margin: 0;
+}
+/* CSS for navbar */
+.navbar {
+  background-color: #333; /* Background color */
+  overflow: hidden; /* Ensure content doesn't overflow */
 }
 
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display:block;
-    justify-content: center;
-    align-items: center;
-    /*
-    */
+.navbar ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul.left {
+  float: left; /* Float the list to the left */
+}
+
+.navbar ul.right {
+  float: right; /* Float the list to the right */
+}
+
+.navbar li {
+  display: inline-block; /* Display list items inline */
+}
+
+.navbar a {
+  display: block; /* Display links as block elements */
+  color: white; /* Text color */
+  text-align: center; /* Center-align the text */
+  padding: 14px 20px; /* Add padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.navbar a:hover {
+  background-color: #ddd; /* Change background color on hover */
+  color: black; /* Change text color */
+}
+
+.navbar .active {
+  background-color: #4CAF50; /* Active link background color */
+}
+
+
+/* CSS for main container */
+.container1 {
+  max-width: 960px; /* Set max width for the container */
+  margin: 20px auto; /* Center the container horizontally */
+  padding: 0 20px; /* Add padding */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+
+
+
+
+/* CSS for register & login page */
+.container2 {
+  max-width: 400px; /* Set max width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add padding */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  background-color: #f9f9f9; /* Background color */
 }
 
 h2 {
-    text-align: center;
+  text-align: center; /* Center-align the heading */
 }
 
 form {
-    margin-top: 20px;
+  margin-top: 20px; /* Add margin at the top */
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block; /* Display labels as block elements */
+  margin-bottom: 5px; /* Add margin at the bottom */
 }
 
 input[type="text"],
 input[type="password"] {
-    width: 50%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%; /* Set input width to 100% */
+  padding: 10px; /* Add padding */
+  margin-bottom: 15px; /* Add margin at the bottom */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  box-sizing: border-box; /* Include padding and border in the width */
 }
 
-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+button[type="submit"] {
+  width: 100%; /* Set button width to 100% */
+  padding: 10px; /* Add padding */
+  background-color: #007bff; /* Background color */
+  color: #fff; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Add cursor pointer */
 }
 
-button:hover {
-    background-color: #0056b3;
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Change background color on hover */
 }
 
-.logs {
-    margin-top: 20px;
+p {
+  margin-top: 15px; /* Add margin at the top */
+  text-align: center; /* Center-align the paragraph */
 }
 
-.log {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline from links */
 }
 
-.add-log {
-    display: block;
-    text-align: center;
-    font-size: 24px;
-    margin-top: 20px;
-    color: #007bff;
-    text-decoration: none;
+a:hover {
+  text-decoration: underline; /* Underline links on hover */
 }
-
-/* CSS for navigation bar */
-
-/* Style the navbar container */
-.navbar {
-    background-color: #333; /* Background color */
-    overflow: hidden; /* Ensure content doesn't overflow */
-  }
-  
-  /* Style the unordered lists inside the navbar */
-  .navbar ul {
-    list-style-type: none; /* Remove bullet points */
-    margin: 0;
-    padding: 0;
-    float: left; /* Float the lists to the left */
-  }
-  
-  /* Style the list items (links) inside the navbar */
-  .navbar li {
-    display: inline-block; /* Display list items inline */
-  }
-  
-  /* Style the links inside the navbar */
-  .navbar a {
-    display: block; /* Display links as block elements */
-    color: white; /* Text color */
-    text-align: center; /* Center-align the text */
-    padding: 14px 20px; /* Add padding */
-    text-decoration: none; /* Remove underline from links */
-  }
-  
-  /* Change the color of the links when hovered over */
-  .navbar a:hover {
-    background-color: #ddd; /* Change background color */
-    color: black; /* Change text color */
-  }
-  
-  /* Active/current link */
-  .navbar .active {
-    background-color: #4e3355; /* Active link background color */
-  }
-  
-  /* Move the "Home" and "Add Workout" links to the far left */
-  .navbar .left {
-    float: left; /* Float left */
-  }
-  
-  /* Move the "Login", "Register", and "Logout" links to the far right */
-  .navbar .right {
-    float: right; /* Float right */
-  }
-  
