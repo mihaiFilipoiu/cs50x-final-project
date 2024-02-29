@@ -35,6 +35,8 @@ app.py: This file contains the Flask application setup, including route definiti
 
 HTML Templates: Each HTML template in the templates directory corresponds to a specific page or component of the web application. For example:
 
+- layout: This template renders the navbar of the app with specific buttons for when the user is logged in or not.
+
 - login.html: This template renders the login page, allowing users to enter their credentials and log in to their accounts.
 
 - register.html: This template renders the registration page, allowing new users to create an account.
