@@ -3,7 +3,7 @@ body {
 }
 /* CSS for navbar */
 .navbar {
-  background-color: #333; /* Background color */
+  background-color: #585454; /* Background color */
   overflow: hidden; /* Ensure content doesn't overflow */
 }
 
@@ -25,12 +25,16 @@ body {
   display: inline-block; /* Display list items inline */
 }
 
+.current_user {
+  color:#22d39e;
+}
+
 .navbar a {
   display: block; /* Display links as block elements */
   color: white; /* Text color */
   text-align: center; /* Center-align the text */
   padding: 14px 20px; /* Add padding */
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none !important; /* Remove underline from links */
 }
 
 .navbar a:hover {
@@ -39,7 +43,7 @@ body {
 }
 
 .navbar .active {
-  background-color: #4CAF50; /* Active link background color */
+  background-color: #26bb8e; /* Active link background color */
 }
 
 
@@ -91,7 +95,7 @@ input[type="password"] {
 button[type="submit"] {
   width: 100%; /* Set button width to 100% */
   padding: 10px; /* Add padding */
-  background-color: #007bff; /* Background color */
+  background-color: #058a69; /* Background color */
   color: #fff; /* Text color */
   border: none; /* Remove border */
   border-radius: 5px; /* Add border radius */
@@ -99,7 +103,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #0056b3; /* Change background color on hover */
+  background-color: #68be93; /* Change background color on hover */
 }
 
 p {
@@ -135,7 +139,7 @@ h2 {
   text-align: center; /* Center-align the text */
   font-size: 24px; /* Font size */
   margin-bottom: 20px; /* Add margin at the bottom */
-  color: #007bff; /* Text color */
+  color: #188f69; /* Text color */
   text-decoration: none !important; /* Remove underline from link */
 }
 
@@ -213,7 +217,7 @@ input[type="number"] {
   width: 100%; /* Set button width to 100% */
   padding: 10px; /* Add padding */
   margin-top: 10px; /* Add margin at the top */
-  background-color: #007bff; /* Background color */
+  background-color: #2abb83; /* Background color */
   color: #fff; /* Text color */
   border: none; /* Remove border */
   border-radius: 5px; /* Add border radius */
@@ -222,7 +226,7 @@ input[type="number"] {
 
 .add_ex_btn:hover,
 .add_log_btn:hover {
-  background-color: #0056b3; /* Change background color on hover */
+  background-color: #74d6b9; /* Change background color on hover */
 }
 
 
@@ -263,7 +267,7 @@ h2 {
 }
 
 .ex_table th {
-  background-color: #f2f2f2; /* Background color for table header */
+  background-color: #75aca4; /* Background color for table header */
 }
 
 .ex_table tr:nth-child(even) {
