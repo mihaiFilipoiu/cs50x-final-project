@@ -17,14 +17,41 @@ I've also made sure that the app is super easy to navigate. Whether I'm using it
 
 Overall, the Workout Journal App is all about making it easier for me to stay consistent with my workouts and reach my fitness goals. It's like having a personal trainer cheering me on every step of the way!
 
-#### Features
+#### Files:
+
+app.py: This is the main Python file that contains the backend logic of the web application. It is built using the Flask framework and handles routing, user authentication, database interactions, and rendering HTML templates.
+
+helpers.py: This is the secundary Python file that contains helpful functions that i used in 'app.py', such as: login_required()(decorated function).
+
+templates/: This directory contains all the HTML templates used to render different pages of the web application. Each template corresponds to a specific page or component of the app, such as the login page, registration page, homepage, workout logging page, etc.
+
+static/: This directory contains static files such as CSS stylesheets, JavaScript files, and images used in the web application. These files are served to the client-side and are responsible for the styling and functionality of the app's frontend.
+
+workouts.db: This is the SQLite database file used to store user data, workout logs, and other relevant information. The database schema is defined in the app.py file and is used to interact with the database using SQL queries.
+
+#### Files explained:
+
+app.py: This file contains the Flask application setup, including route definitions for different pages, user authentication logic, and database interactions. It handles user registration, login, logout, and session management. Additionally, it defines routes for displaying the homepage, adding a new workout log, viewing workout details, and other functionalities.
+
+HTML Templates: Each HTML template in the templates directory corresponds to a specific page or component of the web application. For example:
+
+login.html: This template renders the login page, allowing users to enter their credentials and log in to their accounts.
+register.html: This template renders the registration page, allowing new users to create an account.
+index.html: This template renders the homepage, displaying logged workouts and providing options to add a new workout or view workout details.
+add_log.html: This template renders the form for adding a new workout log, allowing users to specify details such as muscle group, exercises, sets, reps, and weights.
+log.html: This template renders the detailed view of a workout log, displaying information about the muscle group, date, and exercises performed.
+Static Files: The static directory contains CSS stylesheets, JavaScript files, and images used to enhance the frontend appearance and functionality of the web application. For example:
+
+styles.css: This CSS stylesheet defines the styling for various elements of the web application, such as fonts, colors, layout, and responsiveness.
+
+#### Features:
 
 - User authentication: Users can create accounts and log in securely.
 - Logging workouts: Users can log their workouts, specifying the muscle groups worked and the exercises performed.
 - Viewing workout history: Users can view their workout history, including details of each workout logged.
 - Dynamic forms: The app includes dynamic forms for logging workouts, allowing users to add multiple exercises to a single workout session.
 
-#### Technologies Used
+#### Technologies Used:
 
 - Python
 - Flask
