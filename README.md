@@ -35,14 +35,19 @@ app.py: This file contains the Flask application setup, including route definiti
 
 HTML Templates: Each HTML template in the templates directory corresponds to a specific page or component of the web application. For example:
 
-login.html: This template renders the login page, allowing users to enter their credentials and log in to their accounts.
-register.html: This template renders the registration page, allowing new users to create an account.
-index.html: This template renders the homepage, displaying logged workouts and providing options to add a new workout or view workout details.
-add_log.html: This template renders the form for adding a new workout log, allowing users to specify details such as muscle group, exercises, sets, reps, and weights.
-log.html: This template renders the detailed view of a workout log, displaying information about the muscle group, date, and exercises performed.
+- login.html: This template renders the login page, allowing users to enter their credentials and log in to their accounts.
+
+- register.html: This template renders the registration page, allowing new users to create an account.
+
+- index.html: This template renders the homepage, displaying logged workouts and providing options to add a new workout or view workout details.
+
+- add_log.html: This template renders the form for adding a new workout log, allowing users to specify details such as muscle group, exercises, sets, reps, and weights.
+
+- log.html: This template renders the detailed view of a workout log, displaying information about the muscle group, date, and exercises performed.
+
 Static Files: The static directory contains CSS stylesheets, JavaScript files, and images used to enhance the frontend appearance and functionality of the web application. For example:
 
-styles.css: This CSS stylesheet defines the styling for various elements of the web application, such as fonts, colors, layout, and responsiveness.
+- styles.css: This CSS stylesheet defines the styling for various elements of the web application, such as fonts, colors, layout, and responsiveness.
 
 #### Features:
 
