@@ -12,7 +12,6 @@
         {% if session["user_id"] %}
             <ul class="left">
                 <li {% if request.path == '/' %} class="active" {% endif %}><a href="/">Home</a></li>
-                <li {% if request.path == '/add_log' %} class="active" {% endif %}><a href="/add_log">Add Workout</a></li>
             </ul>
             <ul class="right">
                 <li class="current_user"><span>Welcome, {{ session["username"] }}</span></li>
